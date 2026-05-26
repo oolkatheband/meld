@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="meld.github.io"><b>Visit Official Website</b></a>
+  <a href="[meld.github.io](https://oolkatheband.github.io/meld/)"><b>Visit Official Website</b></a>
 </p>
 
 <p align="center">
