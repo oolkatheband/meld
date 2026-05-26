@@ -1,0 +1,690 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ═══════════════════════════════════════════════════════════════════
+     MATERIAL YOU — Dynamic Color System
+     Personalized, expressive, and harmonious with Meld identity
+     ═══════════════════════════════════════════════════════════════════ */
+
+  /* MD3 Surfaces — Deep void dark theme */
+  --md-sys-color-surface: #08080C;
+  --md-sys-color-surface-dim: #06060A;
+  --md-sys-color-surface-bright: #121216;
+  --md-sys-color-surface-container-lowest: #04040608;
+  --md-sys-color-surface-container-low: #0C0C10;
+  --md-sys-color-surface-container: #111114;
+  --md-sys-color-surface-container-high: #1A1A1E;
+  --md-sys-color-container-highest: #242428;
+
+  /* Material You Primary (Dynamic Green - Spotify identity) */
+  --md-sys-color-primary: #1DB954;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #003D1A;
+  --md-sys-color-on-primary-container: #8FF5A9;
+
+  /* Material You Secondary (Electric Blue) */
+  --md-sys-color-secondary: #4A9EFF;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #003062;
+  --md-sys-color-on-secondary-container: #B3D7FF;
+
+  /* Material You Tertiary (Purple accent) */
+  --md-sys-color-tertiary: #A855F7;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #3D0066;
+  --md-sys-color-on-tertiary-container: #E5B8FF;
+
+  /* Material You Quaternary (Amber - New role) */
+  --md-sys-color-quaternary: #F59E0B;
+  --md-sys-color-on-quaternary: #FFFFFF;
+  --md-sys-color-quaternary-container: #4A2C0A;
+  --md-sys-color-on-quaternary-container: #FFD89B;
+
+  /* Material You Quinary (Cyan - New role) */
+  --md-sys-color-quinary: #22D3EE;
+  --md-sys-color-on-quinary: #FFFFFF;
+  --md-sys-color-quinary-container: #003D47;
+  --md-sys-color-on-quinary-container: #95F1FF;
+
+  /* Material You Error */
+  --md-sys-color-error: #FF6B6B;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #4A0000;
+  --md-sys-color-on-error-container: #FFB3B3;
+
+  /* Material You On-surface colors */
+  --md-sys-color-on-surface: #F5F5F5;
+  --md-sys-color-on-surface-variant: #A1A1A6;
+  --md-sys-color-outline: #555560;
+  --md-sys-color-outline-variant: #2A2A2E;
+
+  /* Material You Inverse */
+  --md-sys-color-inverse-surface: #F5F5F5;
+  --md-sys-color-inverse-on-surface: #08080C;
+  --md-sys-color-inverse-primary: #006D32;
+
+  /* Material You Scrim and Shadow */
+  --md-sys-color-scrim: rgba(0, 0, 0, 0.6);
+  --md-sys-color-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Material You Surface Tint (for elevated surfaces) */
+  --md-sys-color-surface-tint: rgba(29, 185, 84, 0.08);
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MD3 TYPOGRAPHY SCALE — Material You
+     Modern, expressive, and accessible
+     ═══════════════════════════════════════════════════════════════════ */
+  --md-sys-typescale-display-large: 57px;
+  --md-sys-typescale-display-medium: 45px;
+  --md-sys-typescale-display-small: 36px;
+  --md-sys-typescale-headline-large: 32px;
+  --md-sys-typescale-headline-medium: 28px;
+  --md-sys-typescale-headline-small: 24px;
+  --md-sys-typescale-title-large: 22px;
+  --md-sys-typescale-title-medium: 16px;
+  --md-sys-typescale-title-small: 14px;
+  --md-sys-typescale-body-large: 16px;
+  --md-sys-typescale-body-medium: 14px;
+  --md-sys-typescale-body-small: 12px;
+  --md-sys-typescale-label-large: 14px;
+  --md-sys-typescale-label-medium: 12px;
+  --md-sys-typescale-label-small: 11px;
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MD3 ELEVATION — Material You with dark theme optimization
+     ═══════════════════════════════════════════════════════════════════ */
+  --md-sys-elevation-level0: none;
+  --md-sys-elevation-level1: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.15);
+  --md-sys-elevation-level2: 0 1px 2px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.15);
+  --md-sys-elevation-level3: 0 4px 8px rgba(0,0,0,0.3), 0 6px 12px rgba(0,0,0,0.15);
+  --md-sys-elevation-level4: 0 6px 10px rgba(0,0,0,0.3), 0 8px 16px rgba(0,0,0,0.15);
+  --md-sys-elevation-level5: 0 8px 12px rgba(0,0,0,0.3), 0 12px 24px rgba(0,0,0,0.15);
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MD3 SHAPE — Material You corner radius scale
+     Expressive yet consistent
+     ═══════════════════════════════════════════════════════════════════ */
+  --md-sys-shape-corner-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MELD BRAND IDENTITY COLORS
+     Vibrant, harmonious, and Material You compliant
+     ═══════════════════════════════════════════════════════════════════ */
+  --meld-spotify: #1DB954;
+  --meld-electric: #4A9EFF;
+  --meld-purple: #A855F7;
+  --meld-amber: #F59E0B;
+  --meld-pink: #EC4899;
+  --meld-cyan: #22D3EE;
+
+  /* ═══════════════════════════════════════════════════════════════════
+     SHADCN UI COMPATIBILITY LAYER
+     Maps to Material You tokens
+     ═══════════════════════════════════════════════════════════════════ */
+  --background: var(--md-sys-color-surface);
+  --foreground: var(--md-sys-color-on-surface);
+  --card: var(--md-sys-color-surface-container);
+  --card-foreground: var(--md-sys-color-on-surface);
+  --popover: var(--md-sys-color-surface-container);
+  --popover-foreground: var(--md-sys-color-on-surface);
+  --primary: var(--md-sys-color-primary);
+  --primary-foreground: var(--md-sys-color-on-primary);
+  --secondary: var(--md-sys-color-secondary);
+  --secondary-foreground: var(--md-sys-color-on-secondary);
+  --muted: var(--md-sys-color-surface-container-high);
+  --muted-foreground: var(--md-sys-color-on-surface-variant);
+  --accent: var(--md-sys-color-tertiary);
+  --accent-foreground: var(--md-sys-color-on-tertiary);
+  --destructive: var(--md-sys-color-error);
+  --destructive-foreground: var(--md-sys-color-on-error);
+  --border: var(--md-sys-color-outline-variant);
+  --input: var(--md-sys-color-surface-container-high);
+  --ring: var(--md-sys-color-primary);
+  --radius: var(--md-sys-shape-corner-medium);
+}
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* MD3 Surface tokens */
+  --color-surface: var(--md-sys-color-surface);
+  --color-surface-dim: var(--md-sys-color-surface-dim);
+  --color-surface-bright: var(--md-sys-color-surface-bright);
+  --color-surface-container: var(--md-sys-color-surface-container);
+  --color-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  --color-outline: var(--md-sys-color-outline);
+  --color-outline-variant: var(--md-sys-color-outline-variant);
+  
+  /* Meld brand colors */
+  --color-meld-spotify: var(--meld-spotify);
+  --color-meld-electric: var(--meld-electric);
+  --color-meld-purple: var(--meld-purple);
+  --color-meld-amber: var(--meld-amber);
+  --color-meld-pink: var(--meld-pink);
+  --color-meld-cyan: var(--meld-cyan);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+  html {
+    @apply scroll-smooth;
+    background-color: var(--md-sys-color-surface);
+  }
+  body {
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MD3 COMPONENT STYLES — Material You Enhanced
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* MD3 Top App Bar */
+.md3-top-app-bar {
+  height: 64px;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.md3-top-app-bar-scrolled {
+  background-color: var(--md-sys-color-surface-container);
+  box-shadow: var(--md-sys-elevation-level2);
+}
+
+/* MD3 Navigation Item */
+.md3-nav-item {
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 12px 16px;
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md3-nav-item:hover {
+  background-color: rgba(245, 245, 245, 0.08);
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-nav-item-active {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* MD3 Filled Button — Material You */
+.md3-filled-button {
+  height: 40px;
+  padding: 0 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--md-sys-elevation-level1);
+  border: none;
+  cursor: pointer;
+}
+
+.md3-filled-button:hover {
+  box-shadow: var(--md-sys-elevation-level2);
+  transform: translateY(-2px);
+}
+
+.md3-filled-button:active {
+  box-shadow: var(--md-sys-elevation-level1);
+  transform: translateY(0);
+}
+
+.md3-filled-button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+/* MD3 Tonal Button — Material You */
+.md3-tonal-button {
+  height: 40px;
+  padding: 0 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.md3-tonal-button:hover {
+  box-shadow: var(--md-sys-elevation-level1);
+  transform: translateY(-2px);
+}
+
+.md3-tonal-button:active {
+  transform: translateY(0);
+}
+
+/* MD3 Outlined Button — Material You */
+.md3-outlined-button {
+  height: 40px;
+  padding: 0 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: transparent;
+  border: 1px solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-primary);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.md3-outlined-button:hover {
+  background-color: rgba(29, 185, 84, 0.08);
+  border-color: var(--md-sys-color-primary);
+}
+
+/* MD3 Elevated Button — Material You */
+.md3-elevated-button {
+  height: 40px;
+  padding: 0 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-primary);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--md-sys-elevation-level1);
+  border: none;
+  cursor: pointer;
+}
+
+.md3-elevated-button:hover {
+  box-shadow: var(--md-sys-elevation-level2);
+}
+
+/* MD3 Card */
+.md3-card {
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large);
+  padding: 16px;
+  box-shadow: var(--md-sys-elevation-level1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md3-card:hover {
+  box-shadow: var(--md-sys-elevation-level2);
+}
+
+.md3-card-elevated {
+  background-color: var(--md-sys-color-surface-container-low);
+  box-shadow: var(--md-sys-elevation-level2);
+}
+
+.md3-card-filled {
+  background-color: var(--md-sys-color-surface-container-highest);
+  box-shadow: none;
+}
+
+/* MD3 Glass Surface — Material You */
+.md3-glass-surface {
+  background: rgba(17, 17, 20, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--md-sys-shape-corner-large);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md3-glass-surface:hover {
+  border-color: rgba(29, 185, 84, 0.3);
+}
+
+.md3-glass-surface-bright {
+  background: rgba(26, 26, 30, 0.7);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--md-sys-shape-corner-large);
+}
+
+/* MD3 Chip — Material You */
+.md3-chip {
+  height: 32px;
+  padding: 0 16px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  font-size: var(--md-sys-typescale-label-medium);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.md3-chip:hover {
+  background-color: var(--md-sys-color-tertiary-container);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MELD GLOW EFFECTS — Material You
+   ═══════════════════════════════════════════════════════════════════ */
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(29, 185, 84, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(29, 185, 84, 0.6), 0 0 60px rgba(29, 185, 84, 0.2); }
+}
+
+@keyframes glow-pulse-blue {
+  0%, 100% { box-shadow: 0 0 20px rgba(74, 158, 255, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(74, 158, 255, 0.6), 0 0 60px rgba(74, 158, 255, 0.2); }
+}
+
+@keyframes glow-pulse-purple {
+  0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.2); }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes data-flow {
+  0% { stroke-dashoffset: 200; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes bass-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.08); opacity: 0.3; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes waveform {
+  0%, 100% { height: 4px; }
+  50% { height: 20px; }
+}
+
+.animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-glow-pulse-blue { animation: glow-pulse-blue 3s ease-in-out infinite; }
+.animate-glow-pulse-purple { animation: glow-pulse-purple 3s ease-in-out infinite; }
+.animate-cursor { animation: cursor-blink 1.1s step-end infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-bass-pulse { animation: bass-pulse 2s ease-in-out infinite; }
+.animate-marquee { animation: marquee 30s linear infinite; }
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+/* ══��════════════════════════════════════════════════════════════════
+   MELD GLASS & GLOW UTILITIES
+   ═══════════════════════════════════════════════════════════════════ */
+
+.glass-card {
+  background: rgba(18, 18, 20, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card-bright {
+  background: rgba(27, 27, 31, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient-spotify {
+  background: linear-gradient(135deg, #1DB954, #4A9EFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #A855F7, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-glow-spotify {
+  border: 1px solid rgba(29, 185, 84, 0.4);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.1), inset 0 0 20px rgba(29, 185, 84, 0.03);
+}
+
+.border-glow-blue {
+  border: 1px solid rgba(74, 158, 255, 0.4);
+  box-shadow: 0 0 20px rgba(74, 158, 255, 0.1), inset 0 0 20px rgba(74, 158, 255, 0.03);
+}
+
+.border-glow-purple {
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.1), inset 0 0 20px rgba(168, 85, 247, 0.03);
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: var(--md-sys-typescale-label-small);
+  letter-spacing: 0.5px;
+  color: var(--md-sys-color-outline);
+}
+
+.waveform-bar {
+  width: 3px;
+  background: var(--meld-spotify);
+  border-radius: 2px;
+  animation: waveform 0.8s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MD3 TYPOGRAPHY UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════════ */
+
+.md3-display-large {
+  font-size: var(--md-sys-typescale-display-large);
+  line-height: 1.12;
+  letter-spacing: -0.25px;
+  font-weight: 400;
+}
+
+.md3-display-medium {
+  font-size: var(--md-sys-typescale-display-medium);
+  line-height: 1.16;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.md3-display-small {
+  font-size: var(--md-sys-typescale-display-small);
+  line-height: 1.22;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.md3-headline-large {
+  font-size: var(--md-sys-typescale-headline-large);
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.md3-headline-medium {
+  font-size: var(--md-sys-typescale-headline-medium);
+  line-height: 1.29;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.md3-headline-small {
+  font-size: var(--md-sys-typescale-headline-small);
+  line-height: 1.33;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.md3-title-large {
+  font-size: var(--md-sys-typescale-title-large);
+  line-height: 1.27;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.md3-title-medium {
+  font-size: var(--md-sys-typescale-title-medium);
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+}
+
+.md3-title-small {
+  font-size: var(--md-sys-typescale-title-small);
+  line-height: 1.43;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+.md3-body-large {
+  font-size: var(--md-sys-typescale-body-large);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.md3-body-medium {
+  font-size: var(--md-sys-typescale-body-medium);
+  line-height: 1.43;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+}
+
+.md3-body-small {
+  font-size: var(--md-sys-typescale-body-small);
+  line-height: 1.33;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.md3-label-large {
+  font-size: var(--md-sys-typescale-label-large);
+  line-height: 1.43;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+.md3-label-medium {
+  font-size: var(--md-sys-typescale-label-medium);
+  line-height: 1.33;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.md3-label-small {
+  font-size: var(--md-sys-typescale-label-small);
+  line-height: 1.45;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-bass-pulse,
+  .animate-marquee,
+  .animate-spin-slow,
+  .animate-glow-pulse,
+  .animate-glow-pulse-blue,
+  .animate-glow-pulse-purple {
+    animation: none;
+  }
+}
