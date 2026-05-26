@@ -17,13 +17,6 @@
   <img src="https://img.shields.io/github/stars/FrancescoGrazioso/Meld?style=social" alt="GitHub Stars">
 </p>
 
-<div align="center">
-  <form action="https://meld.github.io/" method="get" style="display: flex; justify-content: center; gap: 10px;">
-    <input type="text" placeholder="Search meld.github.io..." name="q" style="padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
-    <button type="submit" style="padding: 8px 16px; background-color: #2ea44f; color: white; border: none; border-radius: 4px; cursor: pointer;">Search</button>
-  </form>
-</div>
-
 ---
 
 Meld is an open-source Android music client designed to give you the best of both worlds. It leverages your Spotify account to provide personalized recommendations, home feeds, and search, while streaming audio seamlessly through YouTube Music’s extensive library—all without needing a Spotify Premium subscription.
