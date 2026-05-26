@@ -3,8 +3,12 @@
 </h1>
 
 <p align="center">
-  <b>Fusing Spotify’s personalization with the vast catalog of YouTube Music.
-  Developed by OOLKA</b>
+  <b>Fusing Spotify’s personalization with the vast catalog of YouTube Music. </b>
+  <b>Developed by OOLKA</b>
+</p>
+
+<p align="center">
+  <a href="meld.github.io"><b>Visit Official Website</b></a>
 </p>
 
 <p align="center">
