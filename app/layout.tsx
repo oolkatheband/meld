@@ -71,8 +71,6 @@ export const viewport: Viewport = {
   colorScheme: 'dark',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-background`}>
       <body className="font-sans antialiased bg-background text-foreground overflow-x-hidden">
         <MD3AppBar />
