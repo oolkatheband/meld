@@ -12,9 +12,16 @@
 </p>
 
 <p align="center">
+  <!-- Versioning & License -->
   <img src="https://img.shields.io/badge/Android-8.0%2B-green.svg" alt="Android 8.0+">
   <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg" alt="License: GPL-3.0">
   <img src="https://img.shields.io/github/stars/FrancescoGrazioso/Meld?style=social" alt="GitHub Stars">
+  <br>
+  <!-- Technical & Activity -->
+  <img src="https://img.shields.io/badge/Language-Java-orange.svg" alt="Language: Java">
+  <img src="https://img.shields.io/github/commit-activity/y/FrancescoGrazioso/Meld" alt="Commit Activity">
+  <img src="https://img.shields.io/github/last-commit/FrancescoGrazioso/Meld" alt="Last Commit">
+  <img src="https://img.shields.io/github/issues/FrancescoGrazioso/Meld" alt="Open Issues">
 </p>
 
 ---
