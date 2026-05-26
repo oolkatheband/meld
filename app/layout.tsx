@@ -18,43 +18,29 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://oolkatheband.github.io/meld/'),
   title: {
-    default: 'Meld — Spotify + YouTube Music, fused.',
+    default: 'Meld | Free Spotify-powered Music Client',
     template: '%s | Meld',
   },
-  description:
-    'Meld is an open-source Android music client that combines Spotify\'s recommendation engine with YouTube Music\'s 100M+ catalogue. Zero setup. No Premium required.',
+  description: 'Meld fuses Spotify’s personalization with the vast catalog of YouTube Music. No premium needed.',
   keywords: [
-    'Meld', 'Android music app', 'Spotify integration', 'YouTube Music',
-    'open source', 'InnerTune', 'Metrolist', 'music streaming', 'APK',
+    'Meld', 'Music streaming', 'Spotify', 'YouTube Music', 
+    'Open source music player', 'Android', 'APK'
   ],
-  authors: [{ name: 'Francesco Grazioso', url: 'https://github.com/FrancescoGrazioso' }],
-  creator: 'Francesco Grazioso',
+  authors: [{ name: 'OOLKA' }],
+  creator: 'OOLKA',
   openGraph: {
-    title: 'Meld — Spotify + YouTube Music, fused.',
-    description: 'The open-source Android music client that combines Spotify\'s taste intelligence with YouTube Music\'s catalogue.',
-    type: 'website',
+    title: 'Meld | Free Spotify-powered Music Client',
+    description: 'Fusing Spotify’s personalization with the vast catalog of YouTube Music.',
+    url: 'https://oolkatheband.github.io/meld/',
     siteName: 'Meld',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Meld — Spotify + YouTube Music, fused.',
+    title: 'Meld | Free Spotify-powered Music Client',
     description: 'Open-source Android music. Spotify recommendations. YouTube streaming. Zero setup.',
-  },
-}
-
-export const metadata: Metadata = {
-  title: "Meld | Free Spotify-powered Music Client",
-  description: "Meld fuses Spotify’s personalization with the vast catalog of YouTube Music. No premium needed.",
-  keywords: ["Meld", "Music streaming", "Spotify", "YouTube Music", "Open source music player"],
-  authors: [{ name: "OOLKA" }],
-  metadataBase: new URL('https://oolkatheband.github.io/meld/'),
-  openGraph: {
-    title: "Meld | Free Spotify-powered Music Client",
-    description: "Fusing Spotify’s personalization with the vast catalog of YouTube Music.",
-    url: "https://oolkatheband.github.io/meld/",
-    siteName: "Meld",
-    type: "website",
   },
 };
 
