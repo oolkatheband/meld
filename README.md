@@ -3,7 +3,8 @@
 </h1>
 
 <p align="center">
-  <b>Fusing Spotify’s personalization with the vast catalog of YouTube Music.</b>
+  <b>Fusing Spotify’s personalization with the vast catalog of YouTube Music.
+  Developed by OOLKA</b>
 </p>
 
 <p align="center">
