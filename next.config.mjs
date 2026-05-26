@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Add this line
+  output: 'export',
+  basePath: '/meld',
   typescript: {
     ignoreBuildErrors: true,
   },
