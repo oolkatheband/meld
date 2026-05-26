@@ -3,7 +3,6 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import MD3AppBar from '@/components/meld/MD3AppBar'
 import MD3Footer from '@/components/meld/MD3Footer'
-import type { Metadata } from "next";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -44,19 +43,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-}
-
 export const viewport: Viewport = {
   themeColor: '#08080C',
   colorScheme: 'dark',
 }
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-background`}>
       <body className="font-sans antialiased bg-background text-foreground overflow-x-hidden">
         <MD3AppBar />
@@ -64,5 +57,5 @@ export const viewport: Viewport = {
         <MD3Footer />
       </body>
     </html>
-  )
+  );
 }
